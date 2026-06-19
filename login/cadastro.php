@@ -14,17 +14,29 @@
             <div class="col-md-4">
                 <div class="card mt-5">
                     <div class="card-body">
-                        <h2 class="text-center mt-3">Login</h2>
-                        <form action="login.php" method="POST">
+                        <h2 class="text-center mt-3">Cadastro</h2>
+                        <form action="#" method="POST">
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username</label>
+                                <label for="name" class="form-label">Nome do usuário: </label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
+                                <label for="email" class="form-label">E-mail: </label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cpf" class="form-label">CPF: </label>
+                                <input type="number" class="form-control" id="cpf" name="cpf" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bith" class="form-label">Data de Nascimento: </label>
+                                <input type="date" class="form-control" id="birth" name="birth" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pass" class="form-label">Senha: </label>
                                 <input type="password" class="form-control" id="pass" name="pass" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                            <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
                         </form>
                     </div>
                 </div>
