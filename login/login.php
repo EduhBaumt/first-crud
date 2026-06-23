@@ -21,7 +21,7 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <h2 class="text-center mt-3">Login</h2>
-                        <form action="#" method="POST">
+                        <form action="testelogin.php" method="POST">
                             <div class="mb-3">
                                 <label for="E-mail" class="form-label">Username</label>
                                 <input type="emmail" class="form-control" id="email" name="email" required>
