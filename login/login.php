@@ -35,7 +35,7 @@
                         <div class="container">
                             <div class="d-flex m-2 pt-2 justify-content-center align-items-center">
                                 <p class="p-2 m-0">Não tem conta? </p>
-                                <a href="cadastro.php">Cadastrar</a>
+                                <a href="?page=cadastro">Cadastrar</a>
                             </div>
                         </div>
                     </div>
