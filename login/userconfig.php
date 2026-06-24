@@ -1,5 +1,5 @@
 <?php
-    include('db.php');
+    include_once('db.php');
     switch($_REQUEST['acao']){
         case 'cadastro':
             $name = $_POST['name'];
