@@ -21,9 +21,9 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <h2 class="text-center mt-3">Cadastro</h2>
-                        <form action="login.php" method="POST">
+                        <form action="userconfig.php" method="POST">
+                            <input value="cadastro" type="hidden" name="acao">
                             <div class="mb-3">
-                                <input value="cadastro" type="hidden" name="acao">
                                 <label for="name" class="form-label">Nome de usuário: </label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>

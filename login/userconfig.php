@@ -1,4 +1,5 @@
 <?php
+    include('db.php');
     switch($_REQUEST['acao']){
         case 'cadastro':
             $name = $_POST['name'];
@@ -6,10 +7,9 @@
             $pass = $_POST['pass'];
             $cpf = $_POST['cpf'];
             $birth = $_POST['birth'];
-
+            
+            $sql = "INSERT INTO users (name, email, pass, birth, cpf) VALUES (:name, :email, :pass, :cpf, :birth)";
             try{
-                $sql = "INSERT INTO users ('name', 'email', 'pass', 'birth', 'cpf') 
-                        VALUES (':name',':email',':pass',':cpf',':birth')";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute([
                     ":name"=> $name,
@@ -23,11 +23,11 @@
 
                 echo ("<script>
                 alert('$success_msg');
-                location.href='?page=listar';
+                location.href='login.php';
                 </script>");
 
-                } catch(PDOException $e) {
-                    echo "Erro no cadastro: ". $e->getMessage();
-                    }
-            break;
+            } catch(PDOException $e) {
+                echo "Erro no cadastro: ". $e->getMessage();
+                }
+        break;
         }
