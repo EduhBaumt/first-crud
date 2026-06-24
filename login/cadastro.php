@@ -21,8 +21,9 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <h2 class="text-center mt-3">Cadastro</h2>
-                        <form action="#" method="POST">
+                        <form action="?page=login" method="POST">
                             <div class="mb-3">
+                                <input value="cadastro" type="hidden" name="acao">
                                 <label for="name" class="form-label">Nome do usuário: </label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
