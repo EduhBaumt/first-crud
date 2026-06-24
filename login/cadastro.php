@@ -6,7 +6,13 @@
     <title>Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
+<body style="
+    background: radial-gradient(circle,rgba(21, 35, 49, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    ">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
     <div class="container">
@@ -15,10 +21,10 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <h2 class="text-center mt-3">Cadastro</h2>
-                        <form action="?page=login" method="POST">
+                        <form action="login.php" method="POST">
                             <div class="mb-3">
                                 <input value="cadastro" type="hidden" name="acao">
-                                <label for="name" class="form-label">Nome do usuário: </label>
+                                <label for="name" class="form-label">Nome de usuário: </label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="mb-3">
@@ -42,7 +48,7 @@
                         <div class="container">
                             <div class="d-flex pt-2 m-2 justify-content-center align-items-center">
                                 <p class="p-2 m-0">Ja tem conta? </p>
-                                <a href="?page=login">Entrar</a>
+                                <a href="login.php">Entrar</a>
                             </div>
                         </div>
                     </div>

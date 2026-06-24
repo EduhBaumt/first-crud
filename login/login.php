@@ -22,12 +22,13 @@
                     <div class="card-body">
                         <h2 class="text-center mt-3">Login</h2>
                         <form action="testelogin.php" method="POST">
+                            <input type="hidden" name="acao" value="login">
                             <div class="mb-3">
-                                <label for="E-mail" class="form-label">Username</label>
+                                <label for="E-mail" class="form-label">Nome de usuário: </label>
                                 <input type="emmail" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
+                                <label for="password" class="form-label">Senha: </label>
                                 <input type="password" class="form-control" id="pass" name="pass" required>
                             </div>
                             <button type="submit" class="btn w-100" style="background: #351961; color: white;">Login</button>
@@ -35,7 +36,7 @@
                         <div class="container">
                             <div class="d-flex m-2 pt-2 justify-content-center align-items-center">
                                 <p class="p-2 m-0">Não tem conta? </p>
-                                <a href="?page=cadastro">Cadastrar</a>
+                                <a href="cadastro.php">Cadastrar</a>
                             </div>
                         </div>
                     </div>
