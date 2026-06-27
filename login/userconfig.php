@@ -16,7 +16,7 @@
                     ":email"=> $email,
                     ":pass"=> $pass,
                     ":cpf" => $cpf,
-                    "birth"=> $birth
+                    ":birth"=> $birth
                     ]);
 
                 $success_msg = "Usuário $name cadastrado com sucesso";

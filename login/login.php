@@ -24,11 +24,11 @@
                         <form action="testelogin.php" method="POST">
                             <input type="hidden" name="acao" value="login">
                             <div class="mb-3">
-                                <label for="E-mail" class="form-label">Nome de usuário: </label>
-                                <input type="emmail" class="form-control" id="email" name="email" required>
+                                <label for="email" class="form-label">E-mail: </label>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Senha: </label>
+                                <label for="pass" class="form-label">Senha: </label>
                                 <input type="password" class="form-control" id="pass" name="pass" required>
                             </div>
                             <button type="submit" class="btn w-100" style="background: #351961; color: white;">Login</button>

@@ -1,21 +1,20 @@
 <?php
-    
-    try {
-        include_once('db.php');
-        $email = $_POST['email'];
-        $password = $_POST['pass'];
+    session_start();
 
-        if(isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['pass'])){
+    include_once('db.php');
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
 
-            $sql = "SELECT * FROM users WHERE email = ':email' and pass = ':pass'";
-            $stmt = $pdo->prepare('$sql');
-            $stmt->execute([
-                ':email' => $email,
-                ':pass' => $pass
-            ]);
+    $sql = "SELECT * FROM users WHERE email = :email";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([':email' => $email]);
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            echo 'Você entrou';
-        }
-    } catch (PDOException $e) {
-        echo 'Erro no login'. $e->getMessage();
-        }
+    if ($usuario && $usuario['pass'] === $pass) {
+        $_SESSION['user_id'] = $usuario['id'];
+        $_SESSION['user_name'] = $usuario['name'];
+        header('location: home.php');
+        exit;
+    } else {
+                
+    }
